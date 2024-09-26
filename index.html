@@ -1,12 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>Website Dea Aulia Salsabila</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    
+    <header class="main-header">
+        <!-- Logo -->
+        <div class="logo-icon"></div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#section-home">Home</a>
+            <a href="#section-our-profile">Our Profile</a>
+            <a href="#section-portofolio">Portofolio</a>
+            <a href="#section-message-us">Message Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <section id="section-home">
+            <article class="text-banner-container">
+                <div class="main-home">
+                    <h1 class="text-pembukaan">Hi <span id="user-name">User</span>, Welcome to My Website</h1>
+                    <p>Saya adalah seorang Frontend Engineer yang dimana dalam membangun antarmuka pengguna (UI) yang
+                        interaktif dan responsif. Saya memiliki keahlian dalam menggunakan teknologi modern seperti
+                        HTML, CSS
+                        dan JavaScript untuk menciptakan pengalaman pengguna yang optimal dan performa tinggi.
+                    </p>
+                </div>
+                <!-- Photo Banner -->
+                <div class="banner-wrapper">
+                    <img src="assets/banner1.jpg" class="photo-banner">
+                    <img src="assets/banner2.jpg" class="photo-banner">
+                    <img src="assets/banner3.jpg" class="photo-banner">
+                </div>
+
+                <button class="btn-slide" onclick="plusDivs(-1)">Previous</button>
+                <button class="btn-slide" onclick="plusDivs(1)">Next</button>
+            </article>
+        </section>
+
+        <!-- Our Profile -->
+        <section id="section-our-profile">
+            <div class="our-profile-container">
+                <div class="profile-icon-container">
+                    <div>
+                        <div class="profile-icon"></div>
+                        <h4>Profile 1</h4>
+                    </div>
+
+                    <div>
+                        <div class="profile-icon"></div>
+                        <h4>Profile 2</h4>
+                    </div>
+
+                    <div>
+                        <div class="profile-icon"></div>
+                        <h4>Profile 3</h4>
+                    </div>
+
+                    <div>
+                        <div class="profile-icon"></div>
+                        <h4>Profile 4</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Portofolio -->
+        <section id="section-portofolio">
+            <div class="portofolio-container">
+                <!-- Proyek 1 -->
+                <div class="portofolio-item">
+                    <img src="assets/toko.jpg" alt="Proyek 1" class="portofolio-image">
+                    <div class="portofolio-details">
+                        <h2>Proyek Website Toko Online</h2>
+                        <p>Saya membuat sebuah toko online lengkap dengan fitur shopping cart, integrasi pembayaran, dan
+                            halaman produk yang interaktif.</p>
+                        <a href="#" class="portofolio-link">Lihat Proyek</a>
+                    </div>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="portofolio-item">
+                    <img src="assets/makanan.jpeg" alt="Proyek 2" class="portofolio-image">
+                    <div class="portofolio-details">
+                        <h2>Aplikasi Mobile Pemesanan Makanan</h2>
+                        <p>Aplikasi mobile yang memungkinkan pengguna untuk memesan makanan dari berbagai restoran
+                            dengan antarmuka yang mudah digunakan.</p>
+                        <a href="#" class="portofolio-link">Lihat Proyek</a>
+                    </div>
+                </div>
+
+                <!-- Proyek 3 -->
+                <div class="portofolio-item">
+                    <img src="assets/desain.png" alt="Proyek 3" class="portofolio-image">
+                    <div class="portofolio-details">
+                        <h2>Desain UI/UX untuk Aplikasi Edukasi</h2>
+                        <p>Saya merancang antarmuka pengguna yang interaktif dan ramah pengguna untuk aplikasi edukasi
+                            berbasis mobile.</p>
+                        <a href="#" class="portofolio-link">Lihat Proyek</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Message Us -->
+        <section id="section-message-us">
+            <header>
+                <section>
+                    <div class="form-container">
+                        <!-- Form -->
+                        <div class="form-wrapper">
+                            <form id="messageForm" onsubmit="return formResult();">
+                                <div class="form-group">
+                                    <h1>Message Us</h1>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nama:</label>
+                                    <input type="text" id="nama" name="nama" oninput="validateName()">
+                                    <!-- Validasi on input -->
+                                    <span id="errorNama" class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tanggal Lahir:</label>
+                                    <input type="date" id="tanggalLahir" name="tanggalLahir" oninput="validateDate()">
+                                    <!-- Validasi on input -->
+                                    <span id="errorTanggalLahir" class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Jenis Kelamin:</label>
+                                    <div class="radio-group">
+                                        <input type="radio" name="jenisKelamin" value="Laki-Laki"> Laki-Laki
+                                        <input type="radio" name="jenisKelamin" value="Perempuan"> Perempuan
+                                    </div>
+                                    <span id="errorJenisKelamin" class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Pesan:</label>
+                                    <textarea id="pesan" name="pesan" oninput="validateMessage()"></textarea>
+                                    <span id="errorPesan" class="error-message"></span>
+                                </div>
+
+                                <button type="submit" class="btn-submit">Submit</button>
+                            </form>
+                        </div>
+                        <!-- Result Form -->
+                        <div class="result-form">
+                            <p><strong>Current Time :</strong> <span id="currentTime"></span></p>
+                            <p><strong>Nama:</strong> <span id="resultNama"></span></p>
+                            <p><strong>Tanggal Lahir:</strong> <span id="resultTanggalLahir"></span></p>
+                            <p><strong>Jenis Kelamin:</strong> <span id="resultJenisKelamin"></span></p>
+                            <p><strong>Pesan:</strong> <span id="resultPesan"></span></p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </header>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by deaauliasalsabila</p>
+    </footer>
 </body>
+
 </html>

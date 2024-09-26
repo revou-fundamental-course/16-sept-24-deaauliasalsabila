@@ -1,1 +1,412 @@
 /* ini css */
+
+/* untuk header logo dan navar */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+nav {
+   display: flex; 
+}
+
+nav>a {
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+nav > a:hover {
+    background-color: #dedede;
+    border-radius: 5px;
+}
+
+.logo-icon {
+    height: 60px;
+    width: 60px;
+    background-image: url(../assets/logo.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* untuk text pembukaan dan banner */
+.text-pembukaan {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.text-banner-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Memberi jarak antara teks dan gambar */
+    margin-bottom: 50px;
+}
+
+.main-home {
+    flex: 1;
+    justify-content: center; 
+}
+
+.main-home p {
+    font-family: Arial, sans-serif;
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+.banner-wrapper {
+    flex: 1; 
+}
+
+.photo-banner {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-slide {
+    display: none;
+}
+
+
+/* Our Profile */
+.our-profile-container {
+    position: relative;
+}
+
+.profile-icon {
+    height: 90px;
+    width: 90px;
+    background-image: url(../assets/logo.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.profile-icon-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 30px;
+    max-width: 1140px;
+    margin-left: 200px; /* Menghilangkan margin kiri yang mungkin membatasi */
+    margin-right: 200px; /* Menghilangkan margin kanan yang mungkin membatasi */
+}
+
+.profile-icon-container>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk portofolio */
+.portofolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+
+/* Portofolio */
+.portofolio-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.portofolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portofolio-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portofolio-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.portofolio-details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portofolio-details p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.portofolio-link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.portofolio-link:hover {
+    color: #75a4d6;
+}
+
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%; /* Pastikan mengambil lebar penuh */
+    margin: 10px auto; /* Memusatkan dan menambah jarak */
+}
+
+.form-wrapper {
+    display: flex;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    margin-bottom: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%; /* Memastikan input mengambil lebar penuh dari form */
+    padding: 5px;
+    margin-bottom: 5px; 
+    border-radius: 10px;
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar */
+}
+
+.form-group .radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.form-group .radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+input.error, textarea.error {
+    border-color: red;
+    outline-color: red;
+    margin-bottom: 4px; /* Slight margin for error highlighting */
+}
+
+input.success, textarea.success {
+    border-color: green;
+    outline-color: green;
+}
+
+label {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 150px;
+}
+
+.label-text {
+    flex-grow: 1;
+}
+
+.btn-submit {
+    padding: 10px;
+    width: 200px;
+    background-color: #ccc;
+    color: black;
+    border-radius: 10px;
+    border: 1px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result-form {
+    flex: 1; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    height: 200px;
+    margin-top: 130px;
+    margin-right: 10px;
+    margin-left: 30px;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+
+.result-form p {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #c6c6c6; /* Warna latar belakang footer */
+    color: rgb(47, 47, 47); /* Warna teks */
+    text-align: center; /* Pusatkan teks */
+    padding: 20px; /* Tambahkan padding */
+    position: relative; /* Agar footer berada di bagian bawah */
+    bottom: 0; /* Pastikan footer selalu di bawah */
+    left: 0;
+    right: 0;
+}
+
+footer > p {
+    margin: 0; /* Hilangkan margin default */
+    font-size: 14px; /* Ukuran font */
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) { 
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Tambahkan padding untuk memberi ruang */
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px; /* Mengurangi jarak antara link navigasi */
+    }
+
+    nav > a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0; /* Mengurangi padding agar tidak terlalu tinggi */
+    }
+
+    nav > a:hover {
+        background-color: #dedede;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em; 
+        margin: 0; /* Menghilangkan margin */
+    }
+
+    .logo-icon {
+        margin-bottom: 10px; /* Pertimbangkan untuk menyesuaikan ukuran logo untuk tampilan mobile */
+        height: 50px; /* Sesuaikan tinggi */
+        width: 50px; /* Sesuaikan lebar */
+    }
+
+    .text-banner-container {
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin: 0; /* Pastikan tidak ada margin yang mengganggu */
+    }
+
+    .main-home {
+        margin-bottom: 20px; 
+    }
+
+    .banner-wrapper {
+        width: 100%;
+    }
+
+    .photo-banner {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .profile-icon-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0; 
+        margin-left: 0; /* Hapus margin */
+        margin-right: 0; /* Hapus margin */
+    }
+
+    .profile-icon-container > div {
+        margin-bottom: 15px; 
+        text-align: center; 
+    }
+
+    .profile-icon {
+        height: 60px; 
+        width: 60px; 
+    }
+
+    .form-container {
+        display: block;
+        margin-right: 30px;
+    }
+
+    .form-wrapper {
+        display: block;
+        margin-right: 30px;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        width: 100%; /* Pastikan lebar penuh untuk tampilan mobile */
+    }
+
+    .result-form {
+        margin-top: 0;
+        margin-right: 30px;
+    }
+
+    .btn-submit {
+        width: 100%; /* Tombol ambil lebar penuh */
+    }
+    
+}
